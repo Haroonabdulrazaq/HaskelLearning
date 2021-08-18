@@ -1,6 +1,23 @@
+name :: String
+name = "Doudley"
+
+numOfGifts :: Int
+numOfGifts = 36
+
+myLetters :: Char
+myLetters = 'a'
+
+doudleyGpa :: Double
+doudleyGpa = 3.71
+
 main = do
-  let name = "Doudley"
-  let extraname = "Haroon"
-  putStrLn (name++ " recieves 36 gift for her birthday")
-  putStrLn (" 36 gifts "++ name ++" thought out loud, but i received 17 last year")
-  putStrLn (" Obviously, "++ name ++" wanted more because she is a spoilt child")
+  putStrLn "Welcome to Haskell Calculator"
+  putStrLn "Enter first number"
+  fnum <- getLine
+  putStrLn "Enter Second number"
+  snum <- getLine
+
+  let newFnum = read fnum::Int  -- Type Casting
+  let newSnum = read snum::Int  -- Type Casting
+
+  putStrLn("The result is: " ++ show (newFnum + newSnum))
