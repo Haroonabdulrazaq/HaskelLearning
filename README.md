@@ -1,6 +1,10 @@
 # Haskel Learning
 Learning Haskel to solve some challenges
 
+## Installation of Haskel on Linux(Unix) Ubuntu Distro
+- run this command ``` $ sudo apt-get install haskell-platform ```
+
+for other OS or Linux Distro check (this)[https://www.haskell.org/platform/#linux-ubuntu] link
 
 ## To run 
 - cd into the project directory
