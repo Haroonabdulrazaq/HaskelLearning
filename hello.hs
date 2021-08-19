@@ -1,9 +1,41 @@
-scores :: [Int]
-scores = [73,83, 0]
-main = do
 
-  print (head scores)
-  print (tail scores)
+sayHi :: String -> Int -> IO ()
+sayHi name age = do
+  putStrLn ("Hello "++ name ++" You are "++ show age ++" years old")
+  putStrLn "Welcome User!"
+
+main :: IO ()
+main = do
+  putStrLn "First"
+  sayHi "Jordan" 25
+  putStrLn "Last"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  -- print (head scores)
+  -- print (tail scores)
   -- print (init scores)
   -- print (last scores)
 
