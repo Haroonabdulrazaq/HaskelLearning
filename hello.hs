@@ -1,14 +1,15 @@
 
-sayHi :: String -> Int -> IO ()
-sayHi name age = do
-  putStrLn ("Hello "++ name ++" You are "++ show age ++" years old")
-  putStrLn "Welcome User!"
+walkingToWalk :: String -> IO ()
+walkingToWalk weather= do 
+    if  weather == "sunny"
+      then putStrLn "Walk to work"
+      else putStrLn "Drive to work"
+
+
 
 main :: IO ()
 main = do
-  putStrLn "First"
-  sayHi "Jordan" 25
-  putStrLn "Last"
+  walkingToWalk "rainy" 
 
 
 
@@ -28,10 +29,47 @@ main = do
 
 
 
+-- cube :: Int -> Int
+-- cube num = num * num * num
+
+-- sayHi :: String -> String
+
+-- sayHi name = "Hello " ++ name
 
 
 
+-- main :: IO ()
+-- main = do
+--   let result = cube 4
+--   putStrLn ("The result is: " ++ show result)
+--   let sayingHi =  sayHi "Jonathan"
+--   putStrLn sayingHi
 
+
+-- sayHi :: String -> Int -> IO ()
+-- sayHi name age = do
+--   putStrLn("Hello "++ name ++" "++ show age)
+--   putStrLn("Welcome " ++ name ++" "++ show age)
+
+
+
+-- main :: IO ()
+-- main = do 
+--   putStrLn("First")
+--   sayHi "John" 25
+--   sayHi "Peter" 30
+--   putStrLn("Last")
+
+-- sayHi :: String -> Int -> IO ()
+-- sayHi name age = do
+--   putStrLn ("Hello "++ name ++" You are "++ show age ++" years old")
+--   putStrLn "Welcome User!"
+
+-- main :: IO ()
+-- main = do
+--   putStrLn "First"
+--   sayHi "Jordan" 25
+--   putStrLn "Last"
 
 
   -- print (head scores)
