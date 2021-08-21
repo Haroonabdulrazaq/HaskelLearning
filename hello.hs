@@ -1,15 +1,16 @@
 
-walkingToWalk :: String -> IO ()
-walkingToWalk weather= do 
-    if  weather == "sunny"
-      then putStrLn "Walk to work"
-      else putStrLn "Drive to work"
-
-
+printTo100 :: Int -> IO ()
+printTo100 num = do 
+  if num <= 10
+    then do
+      print num
+      printTo100(num + 1)
+  else putStrLn("Loop Completed")
 
 main :: IO ()
-main = do
-  walkingToWalk "rainy" 
+main = do 
+  let num =0
+  printTo100 num
 
 
 
@@ -28,6 +29,67 @@ main = do
 
 
 
+
+
+
+-- data Student = Student { 
+--                   name :: String    
+--                   ,major :: String
+--                   ,age :: Int
+--                   ,gpa :: Double
+--                 } deriving (Show)
+
+-- main :: IO ()
+
+-- main = do
+--   putStrLn "Hello Haskell" 
+--   let student1 = Student { name = "John", major= "CS", age= 26,gpa= 3.80  }
+--   let student2 = Student { name= "Doe", major= "Biology", age= 22, gpa= 4.80  }
+
+--   putStrLn (name student2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- main :: IO ()
+-- main = do
+--   let grade = "kl"
+--   case grade of
+--     "A" -> putStrLn "Great Work!"
+--     "B" -> putStrLn "Pretty Cool!"
+--     "C" -> putStrLn "You did alirght!"
+--     "D" -> putStrLn "...Not so great!"
+--     _ -> putStrLn "Sorry you failed!"
+
+
+-- walkingToWalk :: String -> Bool -> IO ()
+-- walkingToWalk weather isRaining= do 
+--     if  weather == "sunny" && isRaining
+--     then putStrLn "Walk to work"
+--     else if weather == "cloudy" && isRaining
+--     then putStrLn "Bike to work"
+--     else putStrLn "Drive to work"
+
+
+
+-- main :: IO ()
+-- main = do
+--   let isRaining = True
+--   walkingToWalk "sunny" isRaining
 
 -- cube :: Int -> Int
 -- cube num = num * num * num
