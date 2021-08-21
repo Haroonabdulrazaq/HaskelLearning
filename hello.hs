@@ -1,16 +1,18 @@
+students :: [String]
+students = ["Alice", "Elsa", "Beauty", "Memo", "Austin"]
 
-printTo100 :: Int -> IO ()
-printTo100 num = do 
-  if num <= 10
-    then do
-      print num
-      printTo100(num + 1)
-  else putStrLn("Loop Completed")
+
+printStudents :: Int -> IO ()
+printStudents num = do
+  if num <= 5
+  then do 
+  print (students !! num)
+  printStudents (num + 1)
+  else putStrLn ("Loop Completed")
 
 main :: IO ()
 main = do 
-  let num =0
-  printTo100 num
+  printStudents 0
 
 
 
@@ -30,6 +32,25 @@ main = do
 
 
 
+
+
+
+
+
+
+
+-- printTo100 :: Int -> IO ()
+-- printTo100 num = do 
+--   if num <= 10
+--     then do
+--       print num
+--       printTo100(num + 1)
+--   else putStrLn("Loop Completed")
+
+-- main :: IO ()
+-- main = do 
+--   let num =0
+--   printTo100 num
 
 
 -- data Student = Student { 
@@ -47,21 +68,6 @@ main = do
 --   let student2 = Student { name= "Doe", major= "Biology", age= 22, gpa= 4.80  }
 
 --   putStrLn (name student2)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
