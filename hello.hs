@@ -1,18 +1,19 @@
-students :: [String]
-students = ["Alice", "Elsa", "Beauty", "Memo", "Austin"]
-
-
-printStudents :: Int -> IO ()
-printStudents num = do
-  if num <= 5
-  then do 
-  print (students !! num)
-  printStudents (num + 1)
-  else putStrLn ("Loop Completed")
+guessGame :: Int -> IO ()
+guessGame numOfGuesses = do
+  let guess= "5"
+  if numOfGuesses == 3
+    then putStrLn ("Sorry, You Loose")
+    else do 
+      putStrLn ("Enter a guess!")
+      userGuess <- getLine
+      if userGuess == guess
+        then putStrLn ("Yay, you win!")
+      else do
+        guessGame (numOfGuesses + 1)
 
 main :: IO ()
-main = do 
-  printStudents 0
+main = do
+  guessGame 0
 
 
 
@@ -37,6 +38,21 @@ main = do
 
 
 
+-- students :: [String]
+-- students = ["Alice", "Elsa", "Beauty", "Memo", "Austin"]
+
+
+-- printStudents :: Int -> IO ()
+-- printStudents num = do
+--   if num <= 5
+--   then do 
+--   print (students !! num)
+--   printStudents (num + 1)
+--   else putStrLn ("Loop Completed")
+
+-- main :: IO ()
+-- main = do 
+--   printStudents 0
 
 
 -- printTo100 :: Int -> IO ()
