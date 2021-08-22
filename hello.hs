@@ -1,19 +1,26 @@
-guessGame :: Int -> IO ()
-guessGame numOfGuesses = do
-  let guess= "5"
-  if numOfGuesses == 3
-    then putStrLn ("Sorry, You Loose")
-    else do 
-      putStrLn ("Enter a guess!")
-      userGuess <- getLine
-      if userGuess == guess
-        then putStrLn ("Yay, you win!")
-      else do
-        guessGame (numOfGuesses + 1)
+data Direction = CashIn | CashOut
+data Coin = BTC | BCH | ZEC
+
+
+-- deriving instance Eq Direction => Eq (myDirection)
+-- Still struggling with the challenge
+instance Show (a -> b) where
+         show a= "function"
+
+data Transaction = Transaction  { direction :: Direction  
+                                , coin :: Coin
+                                , fiatValue :: Float 
+                                } deriving (Show) 
+
+ 
+
 
 main :: IO ()
+
 main = do
-  guessGame 0
+  putStrLn "Hello Haskell" 
+  let student1 = Transaction { direction= CashIn, coin= BTC,fiatValue= 2.67   }
+  print ( direction student1)
 
 
 
@@ -36,7 +43,22 @@ main = do
 
 
 
+-- guessGame :: Int -> IO ()
+-- guessGame numOfGuesses = do
+--   let guess= "5"
+--   if numOfGuesses == 3
+--     then putStrLn ("Sorry, You Loose")
+--     else do 
+--       putStrLn ("Enter a guess!")
+--       userGuess <- getLine
+--       if userGuess == guess
+--         then putStrLn ("Yay, you win!")
+--       else do
+--         guessGame (numOfGuesses + 1)
 
+-- main :: IO ()
+-- main = do
+--   guessGame 0
 
 -- students :: [String]
 -- students = ["Alice", "Elsa", "Beauty", "Memo", "Austin"]
