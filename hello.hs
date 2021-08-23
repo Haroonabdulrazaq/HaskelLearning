@@ -4,6 +4,8 @@ data Coin = BTC | BCH | ZEC
 
 -- deriving instance Eq Direction => Eq (myDirection)
 -- Still struggling with the challenge
+-- Add deriving INstance or classes
+
 instance Show (a -> b) where
          show a= "function"
 
